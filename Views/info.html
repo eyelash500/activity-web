@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>活動資訊</title>
+	<!-- CSS  -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+	<!-- javascript -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+</head>
+<body>
+    <form class="ui form" style="margin: 3% 8% 3% 8%;">
+        <h4 class="ui dividing header">主辦資料</h4>
+        <div class="field">
+            <label>主辦單位</label>
+            <div class="field">
+                <input type="text" id="Organizer" value="女孩衣櫥" disabled="">
+            </div>
+            <label>協辦單位</label>
+            <div class="field">
+                <input type="text" id="CoOrganizer" value="Tony股份無限公司" disabled="">
+            </div>
+            </div>
+        <h4 class="ui dividing header">活動資料</h4>
+        <div class="field">
+            <label>主題</label>
+            <div class="field">
+                <input type="text" id="projectName" value="衣櫥換物" disabled="">
+            </div>
+            <label>時間</label>
+            <div class="four fields">
+                <div class="field">
+                    <label>開始日期</label>
+                    <input type="text" id="StartDate" value="2017-01-01" disabled="">
+                </div>
+                <div class="field">
+                    <label>開始時間</label>
+                    <input type="text" id="StartTime" value="09:00" disabled="">
+                </div>
+                <div class="field">
+                    <label>結束日期</label>
+                    <input type="text" id="EndtDate" value="2017-01-01" disabled="">
+                </div>
+                <div class="field">
+                    <label>結束時間</label>
+                    <input type="text" id="StartTime" value="09:00" disabled="">
+                </div>
+            </div>
+            <label>地點</label>
+            <div class="field">
+                <input type="text" id="" value="Tony股份無限公司" disabled="">
+            </div>
+            <label>活動內容</label>
+            <div class="field">
+                <input type="text" id="" value="test" disabled="">
+            </div>
+            <label>點數需求</label>
+            <div class="field">
+                <select class="ui dropdown" disabled="">
+                    <option value="">點數</option>
+                    <option value="10">10</option>
+                    <option value="20" selected="">20</option>
+                </select>
+            </div>
+        </div>
+        <div id="btnBack" class="ui button" onclick="location.href='./index.html'">首頁</div>  
+        <div id="btnJoin" class="ui green button" tabindex="0">參加</div>
+    </form>
+
+    <script type="text/javascript">
+        $('#StartDate').calendar({
+          	type: 'date'
+        });
+        $('.ui.calendar.time').calendar({
+          	type: 'time'
+        });
+        //Func: don't work
+        // $("#btnBack").click(function() {
+        //     document.location = "./createActivity.html";
+        // })
+        $("#btnJoin").click(function() {
+            alert("參加成功！");
+        })
+    </script>
+</body>
+</html>

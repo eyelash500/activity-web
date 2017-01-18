@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXAMPLE</title>
+	<!-- CSS  -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" />
+	<!-- javascript -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+</head>
+<body>
+    <form class="ui form" style="margin: 3% 8% 3% 8%;">
+        <h4 class="ui dividing header">主辦資料</h4>
+        <div class="field">
+            <label>主辦單位</label>
+            <div class="field">
+                <input type="text" id="Organizer" value="女孩衣櫥">
+            </div>
+            <label>協辦單位</label>
+            <div class="field">
+                <input type="text" id="CoOrganizer" value="Tony股份無限公司">
+            </div>
+        </div>
+        <h4 class="ui dividing header">活動資料</h4>
+        <div class="field">
+            <label>主題</label>
+            <div class="field">
+                <input type="text" id="activityName" value="換物趴">
+            </div>
+            <label>時間</label>
+            <div class="four fields">
+                <div class="field">
+                    <label>開始日期</label>
+                    <input type="text" id="StartDate" class="ui calendar date">
+                </div>
+                <div class="field">
+                    <label>開始時間</label>
+                    <input type="text" id="StartTime" class="ui calendar time">
+                </div>
+                <div class="field">
+                    <label>結束日期</label>
+                    <input type="text" id="EndtDate" class="ui calendar date">
+                </div>
+                <div class="field">
+                    <label>結束時間</label>
+                    <input type="text" id="StartTime" class="ui calendar time">
+                </div>
+            </div>
+            <label>地點</label>
+            <div class="field">
+                <input type="text" id="" value="Tony股份無限公司">
+            </div>
+            <label>活動內容</label>
+            <div class="field">
+                <input type="text" id="" value="test">
+            </div>
+            <label>點數需求</label>
+            <div class="field">
+                <select class="ui dropdown">
+                    <option value="">點數</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+        <div id="btnSmt" class="ui button" tabindex="0">Submit</div>
+        <div class="ui button" tabindex="0" onclick="location.href='./index.html'">Cancel</div>
+    </form>
+
+    <script type="text/javascript">
+        $(function(){
+            $('#StartDate').calendar({
+                type: 'date'
+            });
+            $('.ui.calendar.time').calendar({
+                type: 'time'
+            });
+            $("#btnSmt").click(function() {
+                document.location = "./info.html";
+            });
+        })
+        
+    </script>
+</body>
+</html>
