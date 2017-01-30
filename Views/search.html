@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>活動列表</title>
+    <!-- CSS  -->
+<!--    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" href="../CSS/semantic.min.css">
+    <!-- <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- javascript -->
+    <!--  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script> -->
+    <script type="text/javascript" src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/semantic.min.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script> -->
+</head>
+<body style="margin: 3% 8% 3% 8%;">
+    <form class="ui form">
+        <h4 class="ui dividing header">活動列表</h4>
+        <div class="field">
+            <label>搜尋</label>
+            <div class="two fields">
+<!--                 <div class="field">
+                    <input type="text" id="StartDate" class="ui calendar date" placeholder="活動發生時間範圍：開始">
+                </div>
+                <div class="field">
+                    <input type="text" id="EndtDate" class="ui calendar date" placeholder="活動發生時間範圍：結束">
+                </div> -->
+                <div class="field">
+                	<input type="text" id="searchText" placeholder="輸入關鍵字搜尋" value="換物活動">
+                </div>
+                <div class="field">
+                	<button class="ui blue button">搜尋</button>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui button" tabindex="0" onclick="location.href='./index.html'">Cancel</div>  
+            </div>
+        </div>
+    </form>
+    <table class="ui padded selectable celled striped grey table">
+            <thead>
+                <tr>
+                    <th>序號</th>
+                    <th>主題</th>
+                    <th>狀態</th>
+                    <th>開始時間</th>
+                    <th>結束時間</th>
+                    <th>主辦單位</th>
+                    <th>地點</th>
+                    <th>查看</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>換物趴</td>
+                    <td><label class="ui green label">執行中</label></td>
+                    <td>2017-01-01</td>
+                    <td>2017-03-01</td>
+                    <td>Tony股份無限公司</td>
+                    <td>Tony股份無限公司</td>
+                    <td><button class="ui blue button">查看（上傳）</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>換物趴2</td>
+                    <td><label class="ui red label">結束</label></td>
+                    <td>2017-01-11</td>
+                    <td>2017-01-11</td>
+                    <td>Tony迷你公司</td>
+                    <td>Tony迷你公司</td>
+                    <td><button class="ui yellow button">查看（參加）</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    <script type="text/javascript">
+        $(function(){
+            $(".ui.green.button").click(function() {
+                document.location = "./activiyArti.html";
+            });
+            $(".ui.yellow.button").click(function() {
+                document.location = "./info.html";
+				alert("跳轉到活動頁面")            
+            });
+        })
+        
+    </script>
+</body>
+</html>

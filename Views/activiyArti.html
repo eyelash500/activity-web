@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>編輯活動文章</title>
+	<!-- CSS  -->
+<!--    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" href="../CSS/semantic.min.css">
+    <!-- <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- javascript -->
+    <!--  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script> -->
+    <script type="text/javascript" src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/semantic.min.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script> -->
+</head>
+<body>
+	<form class="ui form" style="margin: 3% 8% 3% 8%;">
+        <h4 class="ui dividing header">上傳活動資料</h4>
+        <div class="field">
+            <label>活動主題</label>
+            <div class="field">
+                <select class="ui dropdown">
+                	<option value="" selected="" disabled="">--請選擇主題--</option>
+                	<option value="1">換物活動</option>
+                	<option value="2">休閒活動</option>
+                </select>
+            </div>
+        </div>
+        <h4 class="ui dividing header">活動文章</h4>
+        <div class="field">
+            <label>文章主題</label>
+            <div class="field">
+                <input type="text" id="" value="第一次換物趴">
+            </div>
+            <label>文章內容</label>
+            <div class="field">
+                <textarea>第一次換物好恐怖
+                不過很好玩！
+                </textarea>
+            </div>
+            <label>上傳圖片</label>
+            <div class="field">
+                <input type="text" name="">
+            </div>
+        </div>
+        <div id="btnSmt" class="ui button" tabindex="0">送出</div>
+        <div class="ui button" tabindex="0" onclick="location.href='./index.html'">取消</div>
+    </form>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#btnSmt").click(function() {
+            	alert("資格符合，文章儲存成功！\n將跳轉至活動頁面");
+                document.location = "./info.html";
+            });
+        })
+        
+    </script>
+</body>
+</html>

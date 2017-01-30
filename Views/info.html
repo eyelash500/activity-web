@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>活動資訊</title>
-	<!-- CSS  -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
-	<!-- javascript -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+	<title>活動頁面</title>
+    <!-- CSS  -->
+<!--    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" href="../CSS/semantic.min.css">
+    <!-- <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- javascript -->
+    <!--  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script> -->
+    <script type="text/javascript" src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/semantic.min.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script> -->
 </head>
 <body>
+    <div style="text-align:center;">
+        <label class="ui label">這是活動頁面</label><br>
+        <label class="ui label">這是活動圖片</label><br>
+        <img style="width: 50%" src="../Test/IMAG0011.jpg">
+    </div>
     <form class="ui form" style="margin: 3% 8% 3% 8%;">
         <h4 class="ui dividing header">主辦資料</h4>
         <div class="field">
             <label>主辦單位</label>
             <div class="field">
                 <input type="text" id="Organizer" value="女孩衣櫥" disabled="">
-            </div>
-            <label>協辦單位</label>
-            <div class="field">
-                <input type="text" id="CoOrganizer" value="Tony股份無限公司" disabled="">
             </div>
             </div>
         <h4 class="ui dividing header">活動資料</h4>
@@ -54,6 +62,16 @@
             <div class="field">
                 <input type="text" id="" value="test" disabled="">
             </div>
+            <div class="tow fields">
+                <div class="field">
+                    <label>活動網址</label>
+                    <input type="text" id="" value="http://www.google.com" disabled="">
+                </div>
+                <div class="field">
+                    <label>上傳圖片</label>
+                    <input type="text" name="" disabled="">
+                </div>                
+            </div>    
             <label>點數需求</label>
             <div class="field">
                 <select class="ui dropdown" disabled="">
@@ -65,21 +83,24 @@
         </div>
         <div id="btnBack" class="ui button" onclick="location.href='./index.html'">首頁</div>  
         <div id="btnJoin" class="ui green button" tabindex="0">參加</div>
+        <div id="btnArticle" class="ui blue button" onclick="location.href='./activiyArti.html'">上傳文章</div>
     </form>
 
     <script type="text/javascript">
-        $('#StartDate').calendar({
-          	type: 'date'
-        });
-        $('.ui.calendar.time').calendar({
-          	type: 'time'
-        });
+        // $('#StartDate').calendar({
+        //   	type: 'date'
+        // });
+        // $('.ui.calendar.time').calendar({
+        //   	type: 'time'
+        // });
         //Func: don't work
         // $("#btnBack").click(function() {
         //     document.location = "./createActivity.html";
         // })
         $("#btnJoin").click(function() {
-            alert("參加成功！");
+            alert("資格符合，請填寫詳細資料！");
+            document.location = "./joinData.html";
+
         })
     </script>
 </body>

@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>EXAMPLE</title>
-	<!-- CSS  -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
-    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" />
-	<!-- javascript -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
-    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+	<title>建立活動</title>
+    <!-- CSS  -->
+<!--    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" href="../CSS/semantic.min.css">
+    <!-- <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- javascript -->
+    <!--  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script> -->
+    <script type="text/javascript" src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/semantic.min.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script> -->
 </head>
 <body>
     <form class="ui form" style="margin: 3% 8% 3% 8%;">
@@ -18,10 +23,10 @@
             <div class="field">
                 <input type="text" id="Organizer" value="女孩衣櫥">
             </div>
-            <label>協辦單位</label>
+<!--             <label>協辦單位</label>
             <div class="field">
                 <input type="text" id="CoOrganizer" value="Tony股份無限公司">
-            </div>
+            </div> -->
         </div>
         <h4 class="ui dividing header">活動資料</h4>
         <div class="field">
@@ -56,6 +61,16 @@
             <div class="field">
                 <input type="text" id="" value="test">
             </div>
+            <div class="tow fields">
+                <div class="field">
+                    <label>活動網址</label>
+                    <input type="text" id="" value="http://www.google.com">
+                </div>
+                <div class="field">
+                    <label>上傳圖片</label>
+                    <input type="text" name="">
+                </div>                
+            </div>                
             <label>點數需求</label>
             <div class="field">
                 <select class="ui dropdown">
@@ -71,12 +86,12 @@
 
     <script type="text/javascript">
         $(function(){
-            $('#StartDate').calendar({
-                type: 'date'
-            });
-            $('.ui.calendar.time').calendar({
-                type: 'time'
-            });
+            // $('#StartDate').calendar({
+            //     type: 'date'
+            // });
+            // $('.ui.calendar.time').calendar({
+            //     type: 'time'
+            // });
             $("#btnSmt").click(function() {
                 document.location = "./info.html";
             });

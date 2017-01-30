@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>參加活動</title>
+    <!-- CSS  -->
+<!--    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" href="../CSS/semantic.min.css">
+    <!-- <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- javascript -->
+    <!--  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+ -->
+    <script type="text/javascript" src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/semantic.min.js"></script>
+</head>
+<body>
+    <form class="ui form" style="margin: 3% 8% 3% 8%;">
+        <h4 class="ui dividing header">個人資料</h4>
+        <div class="two fields">        
+            <div class="field">
+                <label>姓名</label>
+                <label>Tony</label>
+            </div>
+            <div class="field">
+                <label>性別</label>
+                <label>男</label>
+            </div>
+        </div>
+        <div class="field">
+            <label>地址</label>
+            <div class="field">
+                <input type="text" name="">
+            </div>
+            <label>聯絡電話</label>
+            <div class="field">
+                <input type="text" name="">
+            </div>
+        </div>
+        <div id="btnSmt" class="ui button" tabindex="0">參加</div>
+        <div class="ui button" onclick="location.href='./index.html'">取消</div>
+    </form>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#btnSmt").click(function() {
+                alert("參加成功！")
+                document.location = "./info.html";
+            });
+        })
+        
+    </script>
+</body>
+</html>
